@@ -4,15 +4,8 @@ import {
   Paper,
   Typography,
   List,
-  ListItem,
-  ListItemIcon,
-  ListItemSecondaryAction,
-  ListItemText,
-  IconButton,
-  Checkbox,
   Box,
 } from "@material-ui/core";
-import CommentIcon from "@material-ui/icons/Comment";
 import Item from "./Item";
 
 const useStyles = makeStyles((theme) => ({
