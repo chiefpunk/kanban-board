@@ -24,11 +24,14 @@ const useStyles = makeStyles((theme) =>
 
 export default function App() {
   const classes = useStyles();
+  // console.log(localStorage.getItem("tasks"));
   const [tasks, setTasks] = useState([]);
   const [inputTask, setInputTask] = useState("");
 
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+
   const addTask = useCallback((name) => {
-    setTasks(task=>[...task, {name:name, progress:1, id:task.length, status:1}])
+    name && setTasks(task=>[...task, {name:name, progress:1, id:task.length, status:1}])
   },[setTasks]);
 
   const onChange = useCallback((e) => {

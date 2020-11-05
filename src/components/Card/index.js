@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Card({ title, progress, tasks, setTasks }) {
-  let subTasks = tasks.filter(
+  let subTasks = (tasks || []).filter(
     (task) => parseInt(task.progress) === progress && task.status === 1
   );
 
